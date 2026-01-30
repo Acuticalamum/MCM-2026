@@ -10,15 +10,18 @@
 \usepackage{threeparttable}
 \usepackage{listings}
 \usepackage{paralist}
+\usepackage{bm}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
 \usepackage{microtype}
 \usepackage{appendix}
-\usepackage{xeCJK}
-\setCJKmainfont{SimSun}
 \graphicspath{{img/}}
+\pagestyle{fancy}
+\fancyhead[R]{Page \thepage\ of \pageref{mainbodyend}}
 \let\itemize\compactitem
 \let\enditemize\endcompactitem
 \newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
-\title{ 龚王博是我爹 } 
+\title{EW} 
 \renewcommand{\contest}{MCM/ICM}
 \newcommand\specialsectioning{\setcounter{secnumdepth}{-2}}
 \newcommand\specialappendix{\setcounter{appletdepth}{-2}}
@@ -108,11 +111,65 @@ Some important mathematical notations used in this paper are listed in Table 1.
 
 
 % Chapter 3: 
-\section{}
+\section{Estimating Latent Fan Votes: A Bayesian Inference Approach}
+
+The primary challenge in analyzing "Dancing with the Stars" (DWTS) lies in the fact that fan votes are latent variables, never publicly disclosed by the producers. However, the weekly elimination results and judges' scores provide a set of observable constraints. We propose a Bayesian framework to reverse-engineer the distribution of fan vote proportions.
+
+\subsection{Model Formulation and Notation}
+Let $k_t$ be the number of contestants in week $t$. We define the following variables:
+\begin{itemize}
+    \item $\mathbf{S}_t = \{s_{1,t}, s_{2,t}, \dots, s_{k_t,t}\}$: The set of normalized judges' scores for each contestant.
+    \item $\bm{\theta}_t = \{\theta_{1,t}, \theta_{2,t}, \dots, \theta_{k_t,t}\}$: The latent proportion of fan votes, where $\sum_{i=1}^{k_t} \theta_{i,t} = 1$ and $\theta_{i,t} \ge 0$.
+    \item $y_t$: The observed elimination result (the index of the contestant who was eliminated).
+\end{itemize}
+
+\subsection{The Dirichlet Prior}
+The fan vote proportions reside on a $(k_t-1)$-dimensional simplex. The Dirichlet distribution is the natural conjugate prior for such compositional data. We assume:
+\begin{equation}
+    \bm{\theta}_t \sim \text{Dirichlet}(\alpha_{1,t}, \alpha_{2,t}, \dots, \alpha_{k_t,t})
+\end{equation}
+where $\alpha_{i,t}$ represents the "prior popularity" of contestant $i$. In the absence of specific demographic data, we initially set $\alpha_{i,t} = \alpha_0 = 1$ (a flat prior). For iterative estimation across weeks, we update $\alpha_{i,t}$ based on the posterior mean of week $t-1$, adjusted for recent performance.
+
+\subsection{Likelihood and Voting Constraints}
+The likelihood function $L(y_t | \bm{\theta}_t, \mathbf{S}_t)$ is defined by the specific voting rules of the season. Unlike traditional statistical models, the "observation" here is a ranking outcome, which acts as a hard constraint on the parameter space.
+
+\subsubsection{Percentage-Based System (Seasons 3--27)}
+In this system, the total score $V_{i,t}$ is the sum of percentages. Let $P^J_{i,t} = s_{i,t} / \sum s_{j,t}$ be the judges' score percentage. The elimination condition for contestant $j$ is:
+\begin{equation}
+    L(y_t=j | \bm{\theta}_t, \mathbf{S}_t) = 
+    \begin{cases} 
+    1, & \text{if } P^J_{j,t} + \theta_{j,t} < P^J_{i,t} + \theta_{i,t} \quad \forall i \neq j \\
+    0, & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+\subsubsection{Rank-Based System (Seasons 1--2, 28--34)}
+In the rank-based system, let $R^J_{i,t}$ be the rank of contestant $i$ based on judges' scores and $R^F_{i,t}$ be the rank based on fan votes $\theta_{i,t}$. The contestant with the highest sum of ranks (lowest performance) is eliminated:
+\begin{equation}
+    L(y_t=j | \bm{\theta}_t, \mathbf{S}_t) = 
+    \begin{cases} 
+    1, & \text{if } R^J_{j,t} + R^F_{j,t} > R^J_{i,t} + R^F_{i,t} \quad \forall i \neq j \\
+    0, & \text{otherwise}
+    \end{cases}
+\end{equation}
+
+\subsection{Posterior Inference via MCMC}
+The posterior distribution $P(\bm{\theta}_t | y_t, \mathbf{S}_t) \propto L(y_t | \bm{\theta}_t, \mathbf{S}_t) \cdot \pi(\bm{\theta}_t)$ is analytically intractable due to the discontinuous nature of the likelihood. We employ Markov Chain Monte Carlo (MCMC) sampling, specifically the Metropolis-Hastings algorithm, to sample from the constrained simplex space.
+
+By generating $N = 10,000$ samples for each week, we estimate the mean fan vote $\hat{\theta}_{i,t} = E[\theta_{i,t} | \text{data}]$ and the associated uncertainty.
+
+\subsection{Measures of Consistency and Certainty}
+To evaluate the model, we define two metrics:
+\begin{enumerate}
+    \item \textbf{Consistency Index ($C$):} The proportion of weeks where the maximum a posteriori (MAP) estimate of $\bm{\theta}_t$ correctly identifies the eliminated contestant $y_t$.
+    \item \textbf{Certainty Score ($\sigma$):} Defined as the inverse of the Shannon Entropy of the posterior distribution:
+    \begin{equation}
+        \text{Certainty} = \left( - \sum_{i=1}^{k_t} \hat{\theta}_{i,t} \ln \hat{\theta}_{i,t} \right)^{-1}
+    \end{equation}
+    High certainty indicates that the judges' scores were so disparate that only a very specific range of fan votes could have caused the observed outcome.
+\end{enumerate}
 
 \subsection{}
-
-\subsubsection{}
 
 \subsubsection{}
 
@@ -125,10 +182,6 @@ The overall model can be expressed as:
 
 \subsubsection{Shannon Diversity Index}
 
-\subsubsection{}
-
-
-\subsection{}
 
 \begin{table}[htbp]
     \begin{center}
@@ -155,12 +208,6 @@ The overall model can be expressed as:
     \end{center}
 \end{table}
 
-Using Matlab, we calculated the temporal changes of these system dynamics variables
-in Figure 6.
-
-And we calculated the eigenvalue of Jacobian Matrix:
-$$\lambda(J) = -0.0911, -0.1111, 0.2300, 0.0400$$
-
 
 
 
@@ -177,15 +224,10 @@ $$\lambda(J) = -0.0911, -0.1111, 0.2300, 0.0400$$
         \begin{tabular}{c c c c}
             \toprule[2pt]
             \multicolumn{1}{m{2.5cm}}{\centering Parameters or Variables}
-            &\multicolumn{1}{m{2.5cm}}{\centering Values}
-            &\multicolumn{1}{m{2.5cm}}{\centering Parameters or Variables}
             &\multicolumn{1}{m{2.5cm}}{\centering Values}\\
             \midrule
             $\eta_I$ & 0.005 & $\eta_{I_{l}}$ & 0.005 \\
-            $\alpha_P$ & 1 & $\alpha_W$ & 15 \\
-            $\gamma$ & 0.1 & $\mu_r$ & 1 \\
-            $\mu_t$ & 1 & $\eta_P$ & 0.05 \\
-            $\mu_{B_t}$ & 0.005  \\
+            
             \bottomrule[2pt]
         \end{tabular}
         \begin{tablenotes}
@@ -199,11 +241,11 @@ $$\lambda(J) = -0.0911, -0.1111, 0.2300, 0.0400$$
 
 
 \begin{enumerate}
-    \item \textbf{Enhancing Comprehensive Pest Control and Reducing Pesticide Dependence}
+    \item \textbf{}
 
-    \item \textbf{Enhancing Ecosystem Resilience}
+    \item \textbf{}
 
-    \item \textbf{Preventing Biodiversity Imbalance}
+    \item \textbf{}
 \end{enumerate}
 
 
@@ -232,9 +274,6 @@ $$\lambda(J) = -0.0911, -0.1111, 0.2300, 0.0400$$
     \item[1] \textbf{Management Complexity:} 
     \item[2] \textbf{Ecological Risks:} 
 \end{itemize}
-
-
-\subsubsection{}
 
 \subsection{}
 
@@ -275,7 +314,12 @@ $$\lambda(J) = -0.0911, -0.1111, 0.2300, 0.0400$$
 
 \clearpage
 
-\pagenumbering{gobble}
+\label{mainbodyend} % <--- 关键：把标签放在这里！
+
+\newpage
+\renewcommand{\sectionmark}[1]{\markright{#1}}
+\fancyhead[R]{\rightmark} % 右上角将显示当前 Section 的标题
+%\pagenumbering{gobble}
 \section{Report on Use of AI}
 \noindent
 1.OpenAI \textit{ChatGPT}(https://chat.openai.com/) 
@@ -292,8 +336,8 @@ Output:
 Query3: 
 Output:
 \newpage
-\pagenumbering{arabic}
-\setcounter{page}{26}
+% \pagenumbering{arabic}
+% \setcounter{page}{26}
 
 
 \end{document}
