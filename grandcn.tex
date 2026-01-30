@@ -1,0 +1,299 @@
+\documentclass[12pt]{article}
+%\linespread{1.1}
+% \bibliographystyle{plain}
+\usepackage[2632449]{easymcm}
+\problem{C}
+\usepackage{palatino} 
+\usepackage{pdfpages}
+\usepackage{longtable}
+\usepackage{tabu}
+\usepackage{threeparttable}
+\usepackage{listings}
+\usepackage{paralist}
+\usepackage{microtype}
+\usepackage{appendix}
+\usepackage{xeCJK}
+\setCJKmainfont{SimSun}
+\graphicspath{{img/}}
+\let\itemize\compactitem
+\let\enditemize\endcompactitem
+\newcommand{\upcite}[1]{\textsuperscript{\textsuperscript{\cite{#1}}}}
+\title{ 龚王博是我爹 } 
+\renewcommand{\contest}{MCM/ICM}
+\newcommand\specialsectioning{\setcounter{secnumdepth}{-2}}
+\newcommand\specialappendix{\setcounter{appletdepth}{-2}}
+
+
+\begin{document}
+
+
+\begin{abstract}
+    
+% \begin{figure}[htbp]
+% 	\centering
+% 	\includegraphics[scale=0.12]{Food Web.jpg}
+% 	\caption{Food Web}
+% 	\label{Figure 3}
+% \end{figure}
+
+    \vspace{5pt}
+    \textbf{Keywords}:
+
+\end{abstract}
+
+\maketitle % summary
+
+\tableofcontents % contents
+ 
+ 
+
+% Chapter 1: Introduction
+\section{Introduction}
+
+\subsection{Problem Background}
+
+
+\subsection{Restatement of the Problem}
+
+\begin{itemize}
+   \item 
+   \item 
+   \item 
+   \item 
+   \item 
+\end{itemize}
+
+
+% \subsection{Our Work}
+% \begin{figure}[h]
+%     \begin{center}
+%     \includegraphics[scale=0.16]{Our Work.jpg}
+%     \caption{Our Work}
+%     \end{center}
+% \end{figure}
+
+
+% Chapter 2: 
+\section{}
+
+\subsection{}
+\begin{enumerate} %有序列表
+   \item {\bf 11}
+   \item {\bf 22}
+   \item {\bf 33}
+\end{enumerate}
+
+
+\subsection{Notations}
+Some important mathematical notations used in this paper are listed in Table 1. 
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Notations used in this paper}
+        \begin{tabular}{c c}
+            \toprule[2pt]
+            {\centering Symbol}
+            &{\centering Description }\\
+            \midrule
+            $E$ & entropy \\
+            \bottomrule[2pt]
+        \end{tabular}
+        \begin{tablenotes}
+            \footnotesize
+            \item[*] *There are some variables that are not listed here and 
+            will be discussed in detail in each section. %此处加入注释*信息
+        \end{tablenotes}
+    \end{center}
+\end{table}
+
+
+
+% Chapter 3: 
+\section{}
+
+\subsection{}
+
+\subsubsection{}
+
+\subsubsection{}
+
+\subsection{Differential Equation Model Based on System Dynamics}
+
+The overall model can be expressed as:
+
+
+\subsection{}
+
+\subsubsection{Shannon Diversity Index}
+
+\subsubsection{}
+
+
+\subsection{}
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Specified or Initial Values}
+        \begin{tabular}{c c c c}
+            \toprule[2pt]
+            \multicolumn{1}{m{2.5cm}}{\centering Parameters or Variables}
+            &\multicolumn{1}{m{2.5cm}}{\centering Values}
+            &\multicolumn{1}{m{2.5cm}}{\centering Parameters or Variables}
+            &\multicolumn{1}{m{2.5cm}}{\centering Values}\\
+            \midrule
+            $r_P$ & 0.1 & $\beta_A$ & 0.1 \\
+            $k_G$ & 1000 & $\mu_A$ & 0.05 \\
+            $\alpha$ & 0.05 & $\beta_B$ & 0.1 \\
+            $r_W$ & 0.5 & $\mu_B$ & 0.05 \\
+            $\gamma$ & 0.05 & $P_0$ & 100 \\
+            $\eta_I$ & 0.0001 & $W_0$ & 50 \\
+            $\mu$ & 0.05 & $I_0$ & 30 \\
+            $\mu'$ & 0.02 & $A_0$ & 1 \\
+            $\eta$ & 0.05 & $B_0$ & 1 \\
+            $\mu_r$ & 0.02 & $P_{r_0}$ & 20 \\
+            \bottomrule[2pt]
+        \end{tabular}
+    \end{center}
+\end{table}
+
+Using Matlab, we calculated the temporal changes of these system dynamics variables
+in Figure 6.
+
+And we calculated the eigenvalue of Jacobian Matrix:
+$$\lambda(J) = -0.0911, -0.1111, 0.2300, 0.0400$$
+
+
+
+
+
+% Chapter 4:
+\section{}
+\subsection{}
+
+\subsection{}
+
+\begin{table}[htbp]
+    \begin{center}
+        \caption{Specified or Initial Values}
+        \begin{tabular}{c c c c}
+            \toprule[2pt]
+            \multicolumn{1}{m{2.5cm}}{\centering Parameters or Variables}
+            &\multicolumn{1}{m{2.5cm}}{\centering Values}
+            &\multicolumn{1}{m{2.5cm}}{\centering Parameters or Variables}
+            &\multicolumn{1}{m{2.5cm}}{\centering Values}\\
+            \midrule
+            $\eta_I$ & 0.005 & $\eta_{I_{l}}$ & 0.005 \\
+            $\alpha_P$ & 1 & $\alpha_W$ & 15 \\
+            $\gamma$ & 0.1 & $\mu_r$ & 1 \\
+            $\mu_t$ & 1 & $\eta_P$ & 0.05 \\
+            $\mu_{B_t}$ & 0.005  \\
+            \bottomrule[2pt]
+        \end{tabular}
+        \begin{tablenotes}
+            \footnotesize
+            \item[*] *The values of the variables not listed 
+            are the same as those in Table 2.
+        \end{tablenotes}
+    \end{center}
+\end{table}
+
+
+
+\begin{enumerate}
+    \item \textbf{Enhancing Comprehensive Pest Control and Reducing Pesticide Dependence}
+
+    \item \textbf{Enhancing Ecosystem Resilience}
+
+    \item \textbf{Preventing Biodiversity Imbalance}
+\end{enumerate}
+
+
+
+% Chapter 5: 
+\section{}
+\subsection{Model Extension}
+
+
+
+\subsection{}
+
+\subsubsection{}
+
+\subsubsection{}
+
+\subsubsection{}
+
+
+\begin{itemize}
+    \item \textbf{Benefits:}
+    \item[1] \textbf{Ecological Benefits:} 
+    \item[2] \textbf{Economic Benefits:} 
+    \item[3] \textbf{Sustainability Benefits:} 
+    \item \textbf{Drawbacks}
+    \item[1] \textbf{Management Complexity:} 
+    \item[2] \textbf{Ecological Risks:} 
+\end{itemize}
+
+
+\subsubsection{}
+
+\subsection{}
+
+
+
+% Chapter 6: Strengths and Weaknesses
+\section{Strengths and Weaknesses}
+\subsection{Strengths}
+\begin{itemize}
+    \item \textbf{Logic:} 
+    \item \textbf{Creativity:} 
+    \item \textbf{Credibility:} 
+    \item \textbf{Stability}: 
+\end{itemize}
+
+
+\subsection{Weaknesses}
+\begin{itemize}
+    \item 
+    \item 
+\end{itemize}
+
+
+
+
+% References
+\begin{thebibliography}{99}
+    \bibitem{1} information on https://en.tutiempo.net/climate/cameroon.html.
+\end{thebibliography}
+
+\clearpage
+\specialsectioning
+\section{Letter}
+
+\vspace{2cm}
+
+
+
+\clearpage
+
+\pagenumbering{gobble}
+\section{Report on Use of AI}
+\noindent
+1.OpenAI \textit{ChatGPT}(https://chat.openai.com/) 
+
+\label{1}
+Query1:
+Output:
+
+\label{2}
+Query2: 
+Output: 
+
+\label{3}
+Query3: 
+Output:
+\newpage
+\pagenumbering{arabic}
+\setcounter{page}{26}
+
+
+\end{document}
