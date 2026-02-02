@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.17)  30 JAN 2026 21:45
+This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex 2024.12.17)  1 FEB 2026 18:03
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -705,19 +705,44 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 2.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (e:/TeXLive/texlive/2024/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+) [2])
 \tf@toc=\write5
 \openout5 = `grandcn.toc'.
 
- [2]
+ [3]
 LaTeX Font Info:    Trying to load font information for TS1+ppl on input line 63.
  (e:/TeXLive/texlive/2024/texmf-dist/tex/latex/psnfss/ts1ppl.fd
 File: ts1ppl.fd 2001/06/04 font definitions for TS1/ppl.
-) [3
+) [4
 
-] [4] [5] [6] [7] [8
+] [5]
+Overfull \hbox (15.20074pt too wide) in paragraph at lines 221--221
+|[]\T1/ppl/b/n/17.28 Integrated Math-e-mat-i-cal Frame-work and Em-pir-i-cal Anal-
+ []
 
-] [9
+
+Overfull \hbox (6.53525pt too wide) in paragraph at lines 231--232
+[]\T1/ppl/m/n/12 To iso-late the "Pro-Dancer Ef-fect," we ac-knowl-edge that con-tes-tants are nested within
+ []
+
+[6] [7]
+Missing character: There is no — ("2014) in font pplr8t!
+[8]
+File: perception_gap_heatmap.png Graphic file (type bmp)
+<perception_gap_heatmap.png>
+
+Overfull \hbox (7.15482pt too wide) in paragraph at lines 352--353
+[]\T1/ppl/b/n/12 Models & Singers ($\OT1/cmr/m/n/12 ^^A^^H \OMS/cmsy/m/n/12 ^^Y ^^@\OT1/cmr/m/n/12 0\OML/cmm/m/it/12 :\OT1/cmr/m/n/12 015$\T1/ppl/b/n/12 ): \T1/ppl/m/n/12 These groups face a "high ex-pec-ta-tions penalty"
+ []
+
+
+Overfull \hbox (7.21893pt too wide) in paragraph at lines 358--359
+[]\T1/ppl/m/n/12 To val-i-date our model, we ex-am-ine spe-cific in-stances where the \T1/ppl/m/it/12 Uni-fied La-tent Achieve-
+ []
+
+[9] [10] [11] [12] [13
+
+] [14
 
 ] 
 enddocument/afterlastpage: lastpage setting LastPage.
@@ -726,16 +751,26 @@ enddocument/afterlastpage: lastpage setting LastPage.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `grandcn.out' has not changed.
-(rerunfilecheck)             Checksum: CEBD81F159DBB45EB2DEAFC263F6F901;5531.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `grandcn.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `grandcn.out':
+(rerunfilecheck)             Before: CA556D62C730D178972A8385F3EEF2A2;9938
+(rerunfilecheck)             After:  C32DA13096E5B1B35259E3D773B588FC;9054.
  ) 
 Here is how much of TeX's memory you used:
- 18500 strings out of 474773
- 296163 string characters out of 5757728
- 1930842 words of memory out of 5000000
- 40347 multiletter control sequences out of 15000+600000
- 580028 words of font info for 79 fonts, out of 8000000 for 9000
+ 18548 strings out of 474773
+ 297206 string characters out of 5757728
+ 1932842 words of memory out of 5000000
+ 40392 multiletter control sequences out of 15000+600000
+ 584177 words of font info for 90 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 87i,13n,93p,1000b,450s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,13n,93p,1000b,488s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on grandcn.pdf (9 pages).
+Output written on grandcn.pdf (14 pages).

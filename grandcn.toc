@@ -1,36 +1,49 @@
-\contentsline {section}{\numberline {1}Introduction}{3}{section.0.1}%
-\contentsline {subsection}{\numberline {1.1}Problem Background}{3}{subsection.0.1.1}%
-\contentsline {subsection}{\numberline {1.2}Restatement of the Problem}{3}{subsection.0.1.2}%
-\contentsline {section}{\numberline {2}}{3}{section.0.2}%
-\contentsline {subsection}{\numberline {2.1}}{3}{subsection.0.2.1}%
-\contentsline {subsection}{\numberline {2.2}Notations}{3}{subsection.0.2.2}%
-\contentsline {section}{\numberline {3}Estimating Latent Fan Votes: A Bayesian Inference Approach}{3}{section.0.3}%
-\contentsline {subsection}{\numberline {3.1}Model Formulation and Notation}{4}{subsection.0.3.1}%
-\contentsline {subsection}{\numberline {3.2}The Dirichlet Prior}{4}{subsection.0.3.2}%
-\contentsline {subsection}{\numberline {3.3}Likelihood and Voting Constraints}{4}{subsection.0.3.3}%
-\contentsline {subsubsection}{\numberline {3.3.1}Percentage-Based System (Seasons 3--27)}{4}{subsubsection.0.3.3.1}%
-\contentsline {subsubsection}{\numberline {3.3.2}Rank-Based System (Seasons 1--2, 28--34)}{4}{subsubsection.0.3.3.2}%
-\contentsline {subsection}{\numberline {3.4}Posterior Inference via MCMC}{4}{subsection.0.3.4}%
-\contentsline {subsection}{\numberline {3.5}Measures of Consistency and Certainty}{5}{subsection.0.3.5}%
-\contentsline {subsection}{\numberline {3.6}}{5}{subsection.0.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}}{5}{subsubsection.0.3.6.1}%
-\contentsline {subsection}{\numberline {3.7}Differential Equation Model Based on System Dynamics}{5}{subsection.0.3.7}%
-\contentsline {subsection}{\numberline {3.8}}{5}{subsection.0.3.8}%
-\contentsline {subsubsection}{\numberline {3.8.1}Shannon Diversity Index}{5}{subsubsection.0.3.8.1}%
-\contentsline {section}{\numberline {4}}{5}{section.0.4}%
-\contentsline {subsection}{\numberline {4.1}}{5}{subsection.0.4.1}%
-\contentsline {subsection}{\numberline {4.2}}{5}{subsection.0.4.2}%
-\contentsline {section}{\numberline {5}}{6}{section.0.5}%
-\contentsline {subsection}{\numberline {5.1}Model Extension}{6}{subsection.0.5.1}%
-\contentsline {subsection}{\numberline {5.2}}{6}{subsection.0.5.2}%
-\contentsline {subsubsection}{\numberline {5.2.1}}{6}{subsubsection.0.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2}}{6}{subsubsection.0.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.3}}{6}{subsubsection.0.5.2.3}%
-\contentsline {subsection}{\numberline {5.3}}{7}{subsection.0.5.3}%
-\contentsline {section}{\numberline {6}Strengths and Weaknesses}{7}{section.0.6}%
-\contentsline {subsection}{\numberline {6.1}Strengths}{7}{subsection.0.6.1}%
-\contentsline {subsection}{\numberline {6.2}Weaknesses}{7}{subsection.0.6.2}%
-\contentsline {section}{References}{7}{section.0.7}%
-\contentsline {section}{Letter}{8}{section*.4}%
-\contentsline {section}{Report on Use of AI}{9}{section*.5}%
+\contentsline {section}{\numberline {1}Introduction}{4}{section.0.1}%
+\contentsline {subsection}{\numberline {1.1}Problem Background}{4}{subsection.0.1.1}%
+\contentsline {subsection}{\numberline {1.2}Restatement of the Problem}{4}{subsection.0.1.2}%
+\contentsline {section}{\numberline {2}}{4}{section.0.2}%
+\contentsline {subsection}{\numberline {2.1}}{4}{subsection.0.2.1}%
+\contentsline {subsection}{\numberline {2.2}Notations}{4}{subsection.0.2.2}%
+\contentsline {section}{\numberline {3}Estimating Latent Fan Votes: A Bayesian Inference Approach}{4}{section.0.3}%
+\contentsline {subsection}{\numberline {3.1}Model Formulation and Notation}{5}{subsection.0.3.1}%
+\contentsline {subsection}{\numberline {3.2}The Dirichlet Prior}{5}{subsection.0.3.2}%
+\contentsline {subsection}{\numberline {3.3}Likelihood and Voting Constraints}{5}{subsection.0.3.3}%
+\contentsline {subsubsection}{\numberline {3.3.1}Percentage-Based System (Seasons 3--27)}{5}{subsubsection.0.3.3.1}%
+\contentsline {subsubsection}{\numberline {3.3.2}Rank-Based System (Seasons 1--2, 28--34)}{5}{subsubsection.0.3.3.2}%
+\contentsline {subsection}{\numberline {3.4}Posterior Inference via MCMC}{5}{subsection.0.3.4}%
+\contentsline {subsection}{\numberline {3.5}Measures of Consistency and Certainty}{6}{subsection.0.3.5}%
+\contentsline {subsection}{\numberline {3.6}}{6}{subsection.0.3.6}%
+\contentsline {subsubsection}{\numberline {3.6.1}}{6}{subsubsection.0.3.6.1}%
+\contentsline {subsection}{\numberline {3.7}Differential Equation Model Based on System Dynamics}{6}{subsection.0.3.7}%
+\contentsline {subsection}{\numberline {3.8}}{6}{subsection.0.3.8}%
+\contentsline {subsubsection}{\numberline {3.8.1}Shannon Diversity Index}{6}{subsubsection.0.3.8.1}%
+\contentsline {section}{\numberline {4}Integrated Mathematical Framework and Empirical Analysis}{6}{section.0.4}%
+\contentsline {subsection}{\numberline {4.1}Advanced Mathematical Framework for Factor Analysis}{6}{subsection.0.4.1}%
+\contentsline {subsubsection}{\numberline {4.1.1}Phase I: Hierarchical Variance Decomposition (LMM)}{7}{subsubsection.0.4.1.1}%
+\contentsline {paragraph}{Stochastic Formulation}{7}{paragraph*.2}%
+\contentsline {paragraph}{Estimation via Restricted Maximum Likelihood (REML)}{7}{paragraph*.3}%
+\contentsline {subsubsection}{\numberline {4.1.2}Phase II: Non-linear Perception and Game-Theoretic Attribution (SHAP)}{7}{subsubsection.0.4.1.2}%
+\contentsline {paragraph}{Axiomatic Feature Attribution}{7}{paragraph*.4}%
+\contentsline {paragraph}{Divergence Analysis: The Perception Gap}{8}{paragraph*.5}%
+\contentsline {subsubsection}{\numberline {4.1.3}Phase III: Causal Path Integration (SEM)}{8}{subsubsection.0.4.1.3}%
+\contentsline {paragraph}{Structural and Measurement Equations}{8}{paragraph*.6}%
+\contentsline {subsubsection}{\numberline {4.1.4}The Unified Latent Achievement Model (ULAM)}{8}{subsubsection.0.4.1.4}%
+\contentsline {subsection}{\numberline {4.2}Empirical Analysis and Results}{9}{subsection.0.4.2}%
+\contentsline {subsubsection}{\numberline {4.2.1}The "Pro-Dancer Effect": Technical Coach or Fan Magnet?}{9}{subsubsection.0.4.2.1}%
+\contentsline {subsubsection}{\numberline {4.2.2}The Perception Gap: Judges vs. Fans}{9}{subsubsection.0.4.2.2}%
+\contentsline {subsubsection}{\numberline {4.2.3}Case Study Validation: The ULAM Score in Action}{10}{subsubsection.0.4.2.3}%
+\contentsline {subsection}{\numberline {4.3}Conclusion on Factor Impact}{11}{subsection.0.4.3}%
+\contentsline {section}{\numberline {5}}{11}{section.0.5}%
+\contentsline {subsection}{\numberline {5.1}Model Extension}{11}{subsection.0.5.1}%
+\contentsline {subsection}{\numberline {5.2}}{11}{subsection.0.5.2}%
+\contentsline {subsubsection}{\numberline {5.2.1}}{11}{subsubsection.0.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.2}}{11}{subsubsection.0.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.3}}{11}{subsubsection.0.5.2.3}%
+\contentsline {subsection}{\numberline {5.3}}{11}{subsection.0.5.3}%
+\contentsline {section}{\numberline {6}Strengths and Weaknesses}{11}{section.0.6}%
+\contentsline {subsection}{\numberline {6.1}Strengths}{11}{subsection.0.6.1}%
+\contentsline {subsection}{\numberline {6.2}Weaknesses}{12}{subsection.0.6.2}%
+\contentsline {section}{References}{12}{section.0.7}%
+\contentsline {section}{Letter}{13}{section*.9}%
+\contentsline {section}{Report on Use of AI}{14}{section*.10}%
 \contentsfinish 
